@@ -17,9 +17,4 @@ In other words, it is the total probability of being labeled wrong by the classi
 
  Since we can express $$p(\mathbf{x},y=i)$$ as $$p(y=i \vert \mathbf{x})p(\mathbf{x})$$ and $$p(\mathbf{x})$$ does not depend on the value of $$y$$, we can directly try to maximize $$p(y=i \vert \mathbf{x})$$ to minimize the $$p(error)$$. This confirms our intuition from the previous post.
 
-
-
-
-
-
 *These notes are products of self studies from several machine learning resources.*
