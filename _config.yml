@@ -6,7 +6,7 @@
 name: Ege Beyazit
 
 # Short bio or description (displayed in the header)
-description: *Learning how to learn things.*
+description: Learning how to learn things.
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: {{site.baseurl}}/images/75648967.png
