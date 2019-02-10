@@ -12,6 +12,4 @@ We make use of probability theory to clarify and also generalize problem definit
 We can for example, restate the decision problem with hospital records as follows:
 - Given a set of samples from the joint distribution $$p(\mathbf{x},y)$$ where $$\mathbf{x} \in \mathbb{R}^d$$ and $$y \in \{0,1\}$$, learn a separating function that is able to correctly divide unseen samples from the same distribution. Note that $$\mathbf{x}$$ carries the information provided by the hospital records, and $$y$$ encodes if a patient is sick or not.
 
-In this case we are interested in the value of $$y$$ that maximizes $$p(y \vert \mathbf{x})$$. We can use Bayes' rule to expand this as:
-
-p(y \vert \mathbf{x}) = \dfrac{p(\mathbf{x} \vert y)p(y)}{p(\mathbf{x})}
+In this case we are interested in the value of $$y$$ that maximizes $$p(y \vert \mathbf{x})$$. We can use Bayes' rule to expand this as: $$p(y \vert \mathbf{x}) = \dfrac{p(\mathbf{x} \vert y)p(y)}{p(\mathbf{x})}$$.
