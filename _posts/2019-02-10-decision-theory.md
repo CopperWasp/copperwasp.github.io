@@ -13,7 +13,7 @@ Assume instances provided with label 0 reside in the region $$R_0$$, and label 1
 
 In other words, it is the total probability of being labeled wrong by the classifier. Given an instance $$\mathbf{x}$$, if $$p(\mathbf{x}, y=1) > p(\mathbf{x}, y=0)$$ then the classifier should label x as $$y=1$$ to minimize the given summation.
  - *If* $$p(\mathbf{x}, y=1)$$ *is large, then* $$p(\mathbf{x}, y=0)$$ *is small.*
- - *If* $$p(\mathbf{x}, y=0)$$ *is small, then* $$p(\mathbf{x} \in R_0, y=1)$$ *is small.*
+ - *If* $$p(\mathbf{x}, y=0)$$ *is small, then* $$p(\mathbf{x} \in R_1, y=0)$$ *is small.*
 
  Since we can express $$p(\mathbf{x},y=i)$$ as $$p(y=i \vert \mathbf{x})p(\mathbf{x})$$ and $$p(\mathbf{x})$$ does not depend on the value of $$y$$, we can directly try to maximize $$p(y=i \vert \mathbf{x})$$ to minimize the $$p(error)$$. This confirms our intuition from the previous post.
 
