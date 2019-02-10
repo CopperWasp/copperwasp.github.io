@@ -12,4 +12,4 @@ We make use of probability theory to clarify and also generalize problem definit
 We can for example, restate the decision problem with hospital records as follows:
 - Given a set of samples from the joint distribution $$p(\mathbf{x},y)$$ where $$\mathbf{x} \in \mathbb{R}^d$$ and $$y \in \{0,1\}$$, learn a separating function that is able to correctly divide unseen samples from the same distribution. Note that $$\mathbf{x}$$ carries the information provided by the hospital records, and $$y$$ encodes if a patient is sick or not.
 
-In this case we are interested in the value of $$y$$ that maximizes $$p(y \vert \mathbf{x})$$. The intuition is to see if probability of being sick is higher than being health given the records and *decide* accordingly. **Is this intuition always correct?**
+In this case we are interested in the value of $$y$$ that maximizes $$p(y \vert \mathbf{x})$$. The intuition is to see if probability of being sick is higher than being healthy given the records, and *decide* accordingly. **Is this intuition always correct?**
