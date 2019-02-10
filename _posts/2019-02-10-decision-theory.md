@@ -7,7 +7,7 @@ We can approach the problem of learning a separating function given a labeled da
 
 Assume instances provided with label 0 reside in the region $$R_0$$, and label 1 in the region $$R_1$$. We can express the misclassification probability of our classifier for new instances as
 $$\begin{align*}
-  & p(error) = p(\mathbf{x} \in R_1, y=0) + p(\mathbf{x} \in R_0, y=1) \\
+  p(error) = p(\mathbf{x} \in R_1, y=0) + p(\mathbf{x} \in R_0, y=1) \\
    = \int_{R_1}p(\mathbf{x}, y=0)d\mathbf{x} + \int_{R_0}p(\mathbf{x}, y=1)d\mathbf{x}.
 \end{align*}$$
 In other words, it is the total probability of being labeled wrong by the classifier.
