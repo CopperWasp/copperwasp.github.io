@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Notes on Decision Theory 2"
+title:  "Notes on Decision Theory 2: Rate of Misclassification"
 ---
 
 We can approach the problem of learning a separating function given a labeled dataset (such as the hospital data example from the previous post) as **learning a decision boundary with the minimum misclassification rate.** A decision boundary in this case, will try to predict the region each instance $$\mathbf{x}$$ resides in, by labelling them with either $$y=0$$ or $$y=1$$.
