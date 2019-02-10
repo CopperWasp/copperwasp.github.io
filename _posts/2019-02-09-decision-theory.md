@@ -10,4 +10,4 @@ Most machine learning problems involve making *optimal decision*. For example, g
 We make use of probability theory to clarify and also generalize problem definitions. This gives us the chance to use mathematical tools and tricks towards solving a given problem.
 
 We can for example, restate the decision problem given hospital records as follows:
-- Given a set of samples from the joint distribution $$p(x,y)$$ where $$x \in \mathbb{R}^d$$ and $$y \in \{0,1\}$$, learn a separating function that is able to correctly divide unseen samples from the same distribution.
+- Given a set of samples from the joint distribution $$\begin{equation} p(x,y) \end{equation}$$ where $$x \in \mathbb{R}^d$$ and $$y \in \{0,1\}$$, learn a separating function that is able to correctly divide unseen samples from the same distribution.
