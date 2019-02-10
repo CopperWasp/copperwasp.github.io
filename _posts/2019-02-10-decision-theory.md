@@ -11,7 +11,7 @@ Assume instances provided with label 0 reside in the region $$R_0$$, and label 1
    = \int_{R_1}p(\mathbf{x}, y=0)d\mathbf{x} + \int_{R_0}p(\mathbf{x}, y=1)d\mathbf{x}.
 \end{align*}$$
 
-In other words, it is the total probability of being labeled wrong by the classifier. Given an instance $$\mathbf{x}$$, if $$p(\mathbf{x}, y=1) > p(\mathbf{x}, y=0)$$ then the classifier should label x as $$y=1$$ to minimize the given summation.
+In other words, it is the total probability of being labeled wrong by the classifier. Given an instance $$\mathbf{x}$$, if $$p(\mathbf{x}, y=1) > p(\mathbf{x}, y=0)$$ then the classifier should label $$\mathbf{x}$$ as $$y=1$$ to minimize the summation above.
  - *If* $$p(\mathbf{x}, y=1)$$ *is large, then* $$p(\mathbf{x}, y=0)$$ *is small.*
  - *If* $$p(\mathbf{x}, y=0)$$ *is small, then* $$p(\mathbf{x} \in R_1, y=0)$$ *is small.*
 
