@@ -11,7 +11,9 @@ Assume instances provided with label 0 reside in the region $$R_0$$, and label 1
    = \int_{R_1}p(\mathbf{x}, y=0)d\mathbf{x} + \int_{R_0}p(\mathbf{x}, y=1)d\mathbf{x}.
 \end{align*}$$
 
-In other words, it is the total probability of being labeled wrong by the classifier. Given an instance $$\mathbf{x}$$, if $$p(\mathbf{x}, y=1) > p(\mathbf{x}, y=0)$$ then the classifier should label x as $$y=1$$ to minimize the given summation (if $$p(\mathbf{x}, y=1)$$ is large then $$p(\mathbf{x}, y=0)$$ is small). Since we can express $$p(\mathbf{x},y=i)$$ as $$p(y=i \vert \mathbf{x})p(\mathbf{x})$$ and $$p(\mathbf{x})$$ does not depend on the value of $$y$$, we can directly try to maximize $$p(y=i \vert \mathbf{x})$$ to minimize the $$p(error)$$. This confirms our intuition from the previous post.
+In other words, it is the total probability of being labeled wrong by the classifier. Given an instance $$\mathbf{x}$$, if $$p(\mathbf{x}, y=1) > p(\mathbf{x}, y=0)$$ then the classifier should label x as $$y=1$$ to minimize the given summation (*e.g. if $$p(\mathbf{x}, y=1)$$ is large then $$p(\mathbf{x}, y=0)$$ is small, which minimizes p(\mathbf{x} \in R_0, y=1)*). Since we can express $$p(\mathbf{x},y=i)$$ as $$p(y=i \vert \mathbf{x})p(\mathbf{x})$$ and $$p(\mathbf{x})$$ does not depend on the value of $$y$$, we can directly try to maximize $$p(y=i \vert \mathbf{x})$$ to minimize the $$p(error)$$. This confirms our intuition from the previous post.
+
+
 
 
 
