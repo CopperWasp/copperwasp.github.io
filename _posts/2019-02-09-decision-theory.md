@@ -1,7 +1,6 @@
 ---
 layout: post
 title:  "Notes on Decision Theory"
-mathjax: true
 ---
 
 Uncertainty is at the core of machine learning systems. We use probability theory to quantify and manipulate uncertainty. This turns uncertainty from something we are afraid of to something we can make use of.
