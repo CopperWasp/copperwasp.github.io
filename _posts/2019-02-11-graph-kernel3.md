@@ -10,9 +10,11 @@ $$\begin{equation}
     \begin{cases}
       -w_{i,j}, & \text{if}\ \{v_i,v_j\} \in E\\
       \sum_{j:\{v_i,v_j\}\in E^{w_{i,j}}}, & \text{if}\ i=j\\
-      0, & \text{otherwise}
+      0, & \text{otherwise,}
     \end{cases}
 \end{equation}$$
+where $$w_{i,j}$$ is the weight of the edge \{v_i,v_j\}.
+
 
 
 
