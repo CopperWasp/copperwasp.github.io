@@ -18,6 +18,5 @@ Graph invariants are important (specifically in graph kernel literature and more
 - **Local invariants:** They represent local properties such as number of triangles, squares etc. that appear in a graph $$G$$.
 - **Spectral invariants:** They carry information in a more *global* level. Usually expressed as functions of the eigenvalues of a graphs Laplacian or adjacency matrix.
 
-**References**
-*Kondor, R. and Pan, H., 2016. The multiscale laplacian graph kernel. In Advances in Neural Information Processing Systems (pp. 2990-2998).*
-https://papers.nips.cc/paper/6135-the-multiscale-laplacian-graph-kernel.pdf
+**References**  
+*Kondor, R. and Pan, H., 2016. The multiscale laplacian graph kernel. In Advances in Neural Information Processing Systems (pp. 2990-2998).* [Link to the paper](https://papers.nips.cc/paper/6135-the-multiscale-laplacian-graph-kernel.pdf)
