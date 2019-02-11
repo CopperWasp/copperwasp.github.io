@@ -13,7 +13,11 @@ $$\begin{equation}
       0, & \text{otherwise,}
     \end{cases}
 \end{equation}$$  
-where $$w_{i,j}$$ is the weight of the edge $$\{v_i,v_j\}$$.
+where $$w_{i,j}$$ is the weight of the edge $$\{v_i,v_j\}$$.  
+
+Laplacian is an operator just like divergence, gradient and derivate are operators too. Intuitively Laplacian is like a second-derivative in a discrete space (graph). It is defined as the *divergence of the gradient of a function*:
+- Gradient of a multivariate function will give you a gradient field, made of gradient vectors at different points of the function.
+- Divergence of a gradient field will give you a metric that measures the outwards movement (in terms of gradient directions) evaluated at each point.
 
 
 
