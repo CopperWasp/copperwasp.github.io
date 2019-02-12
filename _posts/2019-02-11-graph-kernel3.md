@@ -44,10 +44,10 @@ k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^
 
 The very first thing we observe about this kernel is value of integral is mostly determined by the eigenvectors of $$L_1^{-1}$$ and $$L_2^{-1}$$ that have large eigenvalues and aligned. Since it depends on the eigenvectors of **inverted laplacian matrix**, it captures the similarity between overall shapes of $$G_1$$ and $$G_2$$.
 
-The problems of LG kernel we will address in the next post are:
-1. It assumes that both graphs have same number of vertices,
-2. It is only sensitive to global structure of the graphs,
-3. It is not a permutation invariant kernel, therefore can't measure the similarity between isomorphic (sub)graphs accurately.
+The problems of LG kernel we will be addressing address in the next post are:
+-  It assumes that both graphs have same number of vertices,
+-  It is only sensitive to global structure of the graphs,
+-  It is not a permutation invariant kernel, therefore can't measure the similarity between isomorphic (sub)graphs accurately.
 
 **References**  
 [Kondor, R. and Pan, H., 2016. The multiscale laplacian graph kernel. In Advances in Neural Information Processing Systems (pp. 2990-2998).](https://papers.nips.cc/paper/6135-the-multiscale-laplacian-graph-kernel.pdf)
