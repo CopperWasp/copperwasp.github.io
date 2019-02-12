@@ -36,8 +36,9 @@ The intuitions given above suggest that if we want a kernel that is able to comp
 
 Further expanding the Markov Random Field intuition, assume graphs $$G_1$$ and $$G_2$$ with $$n$$ vertices represented by normal distributions $$p_1 = \mathcal{N}(0,L^{-1}_1)$$ and $$p_2 = \mathcal{N}(0,L^{-1}_2)$$ respectively.
 - Note that as our basis we will use the [Bhattacharyya kernel](http://www.jmlr.org/papers/volume5/jebara04a/jebara04a.pdf) $$k(p_1,p_2) = \int \sqrt{p_1(x)}\sqrt{p_2(x)}dx$$, because it has a closed form for Gaussian distributions. This kernel acts like a symmetric approximation to KL Divergence, measuring the similarity (*affinity*) between probability distributions.
-- Bhattacharyya kernel's closed form for Gaussians is $$\begin{equation}
+- In our case, Bhattacharyya kernel's closed form for Gaussians is $$\begin{equation}
 k(p_1,p_2) = \dfrac{\lvert (\dfrac{1}{2}L_1 + \dfrac{1}{2}L_2)^{-1} \rvert^{1/2}}{\lvert L_1^{-1} \rvert^{1/4}\lvert L_2^{-1} \rvert^{1/4}}\end{equation}$$.
+- We need to make one final observation to be able to completely define the Laplacian graph kernel. If some of the eigenvalues of $$L_1^{-1}$$ or $$L_2^{-1}$$ are very small, some kernel values can be vanishingly small because of the multiplicative nature of the Bhattacharyya kernel. To solve this problem, we additively regularize $$L_1^{-1}$$ and $$L_2^{-1}$$ defining $$S_1 = L_1^{-1} + \gamma I$$ and $$S_2 = L_2^{-1} + \gamma I$$, where $$\gamma$ is a small constant.
 
 
 
