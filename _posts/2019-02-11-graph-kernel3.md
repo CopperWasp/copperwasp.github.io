@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Paper Summary: The Multiscale Laplacian Graph Kernel 2 - Laplacian Graph Kernels"
+title:  "Paper Summary: The Multiscale Laplacian Graph Kernel 3 - Laplacian Graph Kernels"
 ---
 Before diving into the technical details of the proposed method, let us introduce some notation and review relevant background.
 - Let $$G(V,E)$$ be a weighted undirected graph, where $$V = \{v_1,...,v_n\}$$.
