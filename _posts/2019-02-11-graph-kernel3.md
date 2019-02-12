@@ -28,9 +28,20 @@ Spectral graph theory suggest that eigenvectors with low eigenvalues of a graph 
 - Since we already know eigenvectors of Laplacian carry information about the graph, and low eigenvalue eigenvectors are insensitive to local changes, they must be carrying some information in a more global level.
 2. Another way to confirm this intuition is using a Gaussian graphical model over $$n$$ variables ($$x_1,...,x_n$$) to construct the graph $$G$$.
 - Assume for each edge and vertex the clique potentials are $$\phi(x_i,x_j)=e^{-w_{i,j}(x_i-x_j)/2}$$ and $$\psi(x_i)=e^{-\eta {x^2}_i/2}$$ respectively. In other words, if the weighted difference between a pair of nodes is small, then the clique potential is higher. A similar logic applies for the vertex based potential.
-- Given the potentials, the joint distribution $$\mathbf{x}$$ is proportional to multiplication of potentials for each node and edge. Which ends up being $$e^{-\mathbf{x}^T(L+\eta I)\mathbf{x}/2}$$, after rearranging.
+- Given the potentials, the joint distribution $$\mathbf{x}$$ is proportional to (not exactly equal because we don't know how the cliques are factorized) multiplication of potentials for each node and edge. Which ends up being $$e^{-\mathbf{x}^T(L+\eta I)\mathbf{x}/2}$$, after rearranging.
 - This is an interesting outcome since it shows that the covariance matrix of $$\mathbf{x}$$ is $$(L^G + \eta I)^{-1}$$. Since small eigenvalue eigenvectors of a covariance matrix represent the direction of the points with a smaller spread (in terms of variance), this direction applies to a large fraction of points therefore represents a more global information.
 - This is kind of the opposite of the logic that we use for SVD in dimensionality reduction tasks. We select large eigenvalue eigenvectors since they carry a more discriminative information: direction the points differ the most.
+
+The intuitions given above suggest that if we want a kernel that is able to compare two graphs in terms of their overall topology, it is a good idea consider comparing lower eigenvalue eigenvectors of given graphs.
+
+Further expanding the Markov Random Field intuition, assume graphs $$G_1$$ and $$G_2$$ with $$n$$ vertices represented by normal distributions $$p_1 = \mathcal{N}(0,L^{-1}_1)$$ and $$p_2 = \mathcal{N}(0,L^{-1}_2)$$ respectively.
+- Note that as our basis we will use the [Bhattacharyya kernel](http://www.jmlr.org/papers/volume5/jebara04a/jebara04a.pdf) $$k(p_1,p_2) = \int \sqrt{p_1(x)}\sqrt{p_2(x)}dx, because it has a closed form for Gaussian distributions. This kernel acts like a symmetric approximation to KL Divergence, measuring the similarity (*affinity*) between probability distributions.
+- Bhattacharyya kernel's closed form for Gaussians is
+$$\begin{equation}
+k(p_1,p_2) = \dfrac{\lvert (\dfrac{1}{2}L_1 + \dfrac{1}{2}L_2)^{-1} \rvert^{1/2}}{\lvert L_1^{-1} \rvert^{1/4}\lvert L_2^{-1} \rvert^{1/4}
+}
+
+\end{equation}$$
 
 
 
