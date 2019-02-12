@@ -29,7 +29,7 @@ Spectral graph theory suggest that eigenvectors with low eigenvalues of a graph 
 2. Another way to confirm this intuition is using a Gaussian graphical model over $$n$$ variables ($$x_1,...,x_n$$) to construct the graph $$G$$.
 - Assume for each edge and vertex the clique potentials are $$\phi(x_i,x_j)=e^{-w_{i,j}(x_i-x_j)/2}$$ and $$\psi(x_i)=e^{-\eta {x^2}_i/2}$$ respectively. In other words, if the difference between a pair of nodes is small and the weight corresponding to that pair is large, then the clique potential is higher. A similar logic applies for the vertex based potential.
 - Given the potentials, the joint distribution $$\mathbf{x}$$ is proportional to multiplication of potentials for each node and edge. Which ends up being $$e^{-\mathbf{x}^T(L+\eta I)\mathbf{x}/2}$$, after rearranging.
-- This is an interesting outcome since it shows that the covariance matrix of $$\mathbf{x}$$ is $$(L^G + \eta I)^{-1}$$. Since small eigenvalue eigenvectors of a covariance matrix represent the direction of the points with a smaller spread (in terms of variance), this direction applies to a large fraction of points therefore a represents a more global information.
+- This is an interesting outcome since it shows that the covariance matrix of $$\mathbf{x}$$ is $$(L^G + \eta I)^{-1}$$. Since small eigenvalue eigenvectors of a covariance matrix represent the direction of the points with a smaller spread (in terms of variance), this direction applies to a large fraction of points therefore represents a more global information.
 - This is kind of the opposite of the logic that we use for SVD in dimensionality reduction tasks. We select large eigenvalue eigenvectors since they carry a more discriminative information: direction the points differ the most.
 
 
