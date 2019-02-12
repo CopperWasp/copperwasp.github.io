@@ -42,7 +42,7 @@ k(p_1,p_2) = \dfrac{\lvert (\dfrac{1}{2}L_1 + \dfrac{1}{2}L_2)^{-1} \rvert^{1/2}
 - Now we can define the Laplacian graph kernel (LG kernel) as $$\begin{equation}
 k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^{1/2}}{\lvert S_1^{-1} \rvert^{1/4}\lvert S_2^{-1} \rvert^{1/4}}\end{equation}$$.
 
-The very first thing we observe about this kernel is value of integral is mostly determined by the eigenvectors of $$L_1^{-1}$$ and $$L_2^{-1}$$ that have large eigenvalues and aligned. Since it depends on the eigenvectors of **inverted laplacian matrix**, it captures the similarity between overall shapes of $G_1$ and $G_2$.
+The very first thing we observe about this kernel is value of integral is mostly determined by the eigenvectors of $$L_1^{-1}$$ and $$L_2^{-1}$$ that have large eigenvalues and aligned. Since it depends on the eigenvectors of **inverted laplacian matrix**, it captures the similarity between overall shapes of $$G_1$$ and $$G_2$$.
 
 The problems of LG kernel we will address in the next post are:
 1. It assumes that both graphs have same number of vertices,
