@@ -24,9 +24,9 @@ The laplacian matrix is positive semi-definite ($$\mathbf{z}^T L \mathbf{z} \geq
 Spectral graph theory suggest that eigenvectors with low eigenvalues of a graph Laplacian provides information about the overall graph topology. The authors of this paper provided two ways to confirm this.
 1. For any vector $$\mathbf{z} \in \mathbb{R}^n$$, $$\mathbf{z}^T L^G \mathbf{z} = \sum_{\{i,j\} \in E}w_{i,j}(z_i - z_j)^2$$. How do we interpret this equation?
 - First its important to realize that given equation is the quadratic form of Laplacian. In fact, the definition of Graph Laplacian is [designed to capture this quadratic equality](http://www.cs.yale.edu/homes/spielman/561/2012/lect02-12.pdf), so that it can operate like a *discrete derivative*.
-- Still, why do we think low eigenvalue eigenvectors give global information about a graph? An intuitive way to explain this could be following. Assume that $$\mathbf{z}$$ an eigenvector of the Laplacian $$L^G$$. If its a low eigenvalue eigenvector then $$(z_i - z_j)^2$$ component of the Laplacian quadratic form will be small, overall. Which means the eigenvector $$z$$ is a smooth function (will not easily change value when small/local changes happen in its input).
+- Still, why do we think low eigenvalue eigenvectors give global information about a graph? An intuitive way to explain this could be following. Assume that $$\mathbf{z}$$ is an eigenvector of the Laplacian $$L^G$$. If its a low eigenvalue eigenvector then $$(z_i - z_j)^2$$ component of the Laplacian quadratic form will be small, overall. Which means the eigenvector $$z$$ is a smooth function (will not easily change value when small/local changes happen in its input).
 - Since we already know eigenvectors of Laplacian carry information about the graph, and low eigenvalue eigenvectors are insensitive to local changes, they must be carrying some information in a more global level.
-2. 
+2.
 
 
 
