@@ -40,11 +40,14 @@ Further expanding the Markov Random Field intuition, assume graphs $$G_1$$ and $
 k(p_1,p_2) = \dfrac{\lvert (\dfrac{1}{2}L_1 + \dfrac{1}{2}L_2)^{-1} \rvert^{1/2}}{\lvert L_1^{-1} \rvert^{1/4}\lvert L_2^{-1} \rvert^{1/4}}\end{equation}$$.
 - We need to make one final observation to be able to completely define the Laplacian graph kernel. If some of the eigenvalues of $$L_1^{-1}$$ or $$L_2^{-1}$$ are very small, some kernel values can be vanishingly small because of the multiplicative nature of the Bhattacharyya kernel. To solve this problem, we additively regularize $$L_1^{-1}$$ and $$L_2^{-1}$$ defining $$S_1 = L_1^{-1} + \gamma I$$ and $$S_2 = L_2^{-1} + \gamma I$$, where $$\gamma$$ is a small constant.
 - Now we can define the Laplacian graph kernel (LG kernel) as $$\begin{equation}
-k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^{1/2}}{\lvert S_1^{-1} \rvert^{1/4}\lvert S_2^{-1} \rvert^{1/4}}\end{equation}$$
+k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^{1/2}}{\lvert S_1^{-1} \rvert^{1/4}\lvert S_2^{-1} \rvert^{1/4}}\end{equation}$$.
 
+The very first thing we observe about this kernel is value of integral is mostly determined by the eigenvectors of $$L_1^{-1}$$ and $$L_2^{-1}$$ that have large eigenvalues and aligned. Since it depends on the eigenvectors of **inverted laplacian matrix**, it captures the similarity between overall shapes of $G_1$ and $G_2$.
 
-
-
+The problems of LG kernel we will address in the next post are:
+1. It assumes that both graphs have same number of vertices,
+2. It is only sensitive to global structure of the graphs,
+3. It is not a permutation invariant kernel, therefore can't measure the similarity between isomorphic (sub)graphs accurately.
 
 **References**  
 [Kondor, R. and Pan, H., 2016. The multiscale laplacian graph kernel. In Advances in Neural Information Processing Systems (pp. 2990-2998).](https://papers.nips.cc/paper/6135-the-multiscale-laplacian-graph-kernel.pdf)
