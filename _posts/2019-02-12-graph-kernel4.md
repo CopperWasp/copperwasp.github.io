@@ -2,7 +2,7 @@
 layout: post
 title:  "Paper Summary: The Multiscale Laplacian Graph Kernel 4 - The Feature Space Laplacian Graph Kernel"
 ---
-Probabilistically the Laplacian graph kernel assumes that every graph is represented by a joint probability distribution that generates random vectors $$\mathbf{x} = (x_1,...x_n)^T$$ (obviously $$x_i$$ corresponds to the ith graph node). The kernel between two graphs therefore compares these vector generating distributions to calculate a metric of similarity.
+Probabilistically, the Laplacian graph kernel assumes that every graph is represented by a joint probability distribution that generates random vectors $$\mathbf{x} = (x_1,...x_n)^T$$ (obviously $$x_i$$ corresponds to the ith graph node). The kernel between two graphs therefore compares these vector generating distributions to calculate a metric of similarity.
 
 Recall that one of our problems about the Laplacian graph kernel was the fact that it is sensitive to permutations. For example if two input graphs are exactly the same but the nodes are labeled in a different order, then the kernel fails to capture the similarity.
 
