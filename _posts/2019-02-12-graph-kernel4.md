@@ -21,7 +21,7 @@ k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^
 
 So, why do we like the FLG Kernel better?
 1. It is permutation invariant, since its variables are defined by local vertex features.
-2. Now that we work on a feature space that is independent from the graph size, we can apply the kernel to two graphs with different number of vertices.
+2. Now that we work on a feature space that is independent from the graph size, we can apply the kernel to two graphs with different number of vertices.  
 **Note the the FLG Kernel still works in a single scale.** We will address this problem in the next post.
 
 
