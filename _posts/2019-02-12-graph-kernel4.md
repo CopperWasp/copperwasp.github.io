@@ -13,7 +13,11 @@ the authors propose a simple trick to gain *permutation invariance*, which actua
 - For example, let the vector from the vertex space be $$\mathbf{x} = (x_1,...x_n)^T$$. Assume we want to map the vertex space variable onto a two dimensional feature space. Therefore we will only have two feature space variables $$y_1$$ and $$y_2$$.
 - For each feature space variable $$y_i$$, define a $$\phi_i$$ (we won't need to do that once we kernelize the FLG kernel, hang on for now). For example let $$\phi_1$$ return the degree of its input vertex, and $$\phi_2$$ return the weight of its input vertex.
 - Then, the value of the feature can be expressed as $$y_i = \sum_j \text{degree}(v_j)\cdot x_j$$, where $$j$$ iterates over every vertex space variable.
-4. Lets put these together in a more compact form. Defining $$U_{i,j} = \phi_i(v_j)$$ and $$\textbf{y} = U \textbf{x}$$, we have $$\mathbb{E}(\mathbf{y})=0$$ and $$Cov(\mathbf{y},\mathbf{y}) = U Cov(\mathbf{x},\mathbf{x})U^T = UL^{-1}U^T$$ As long as we define a linear transformation between two spaces, such as a dot product as we did above, [the result will still be a multivariate normal random variable](http://www.cs.columbia.edu/~liulp/pdf/linear_normal_dist.pdf).
+4. Lets put these together in a more compact form. As long as we define a linear transformation between two spaces, such as a dot product as we did above, [the result will still be a multivariate normal random variable](http://www.cs.columbia.edu/~liulp/pdf/linear_normal_dist.pdf). Therefore, defining $$U_{i,j} = \phi_i(v_j)$$ and $$\textbf{y} = U \textbf{x}$$, we have $$\mathbb{E}(\mathbf{y})=0$$ and $$Cov(\mathbf{y},\mathbf{y}) = U Cov(\mathbf{x},\mathbf{x})U^T = UL^{-1}U^T$$.
+
+Now we can define the *Feature Space Laplacian Graph Kernel*, by replacing the vertex space variables with the feature space variables we just defined in *Laplacian Graph Kernel*. Let $$S_1 = U_1 L_1^{-1} U^T_1 + \gamma I$$ and $$S_2 = U_2 L_2^{-1} U^T_2 + \gamma I$$. Then,
+$$\begin{equation}
+k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^{1/2}}{\lvert S_1^{-1} \rvert^{1/4}\lvert S_2^{-1} \rvert^{1/4}}\end{equation}$$.
 
 
 
