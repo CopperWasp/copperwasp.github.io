@@ -13,7 +13,7 @@ the authors propose a simple trick to gain *permutation invariance*, which actua
 - For example, let the vector from the vertex space be $$\mathbf{x} = (x_1,...x_n)^T$$. Assume we want to map the vertex space variable onto a two dimensional feature space. Therefore we will only have two feature space variables $$y_1$$ and $$y_2$$.
 - For each feature space variable $$y_i$$, define a $$\phi_i$$ (we won't need to do that once we kernelize the FLG kernel, hang on for now). For example let $$\phi_1$$ return the degree of its input vertex, and $$\phi_2$$ return the weight of its input vertex.
 - Then, the value of the feature can be expressed as $$y_i = \sum_j \text{degree}(v_j)\dot x_j$$, where $$j$$ iterates over every vertex space variable.
-4. Lets put these together in a more compact form. Defining $$U_{i,j} = \phi_i(v_j)$$ and $textbf{y} = U \textbf{x}$$, we have $$\mathbb{E}(\mathbf{y})$$ As long as we define a linear transformation between two spaces, such as a dot product as we did above, [the result will still be a multivariate normal random variable](http://www.cs.columbia.edu/~liulp/pdf/linear_normal_dist.pdf).
+4. Lets put these together in a more compact form. Defining $$U_{i,j} = \phi_i(v_j)$$ and $textbf{y} = U \textbf{x}$$, we have $$\mathbb{E}(\mathbf{y})$$ and $$Cov(\mathbf{y},\mathbf{y}) = U Cov(\mathbf{x},\mathbf{x})U^T$$ As long as we define a linear transformation between two spaces, such as a dot product as we did above, [the result will still be a multivariate normal random variable](http://www.cs.columbia.edu/~liulp/pdf/linear_normal_dist.pdf).
 
 
 
