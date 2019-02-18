@@ -15,12 +15,14 @@ the authors propose a simple trick to gain *permutation invariance*, which actua
 - Then, the value of the feature can be expressed as $$y_i = \sum_j \text{degree}(v_j)\cdot x_j$$, where $$j$$ iterates over every vertex space variable.
 4. Lets put these together in a more compact form. As long as we define a linear transformation between two spaces, such as a dot product as we did above, [the result will still be a multivariate normal random variable](http://www.cs.columbia.edu/~liulp/pdf/linear_normal_dist.pdf). Therefore, defining $$U_{i,j} = \phi_i(v_j)$$ and $$\textbf{y} = U \textbf{x}$$, we have $$\mathbb{E}(\mathbf{y})=0$$ and $$\text{Cov}(\mathbf{y},\mathbf{y}) = U \text{Cov}(\mathbf{x},\mathbf{x})U^T = UL^{-1}U^T$$.
 
-Now we can define the *Feature Space Laplacian Graph Kernel*, by replacing the vertex space variables with the feature space variables we just defined in *Laplacian Graph Kernel*. Let $$S_1 = U_1 L_1^{-1} U^T_1 + \gamma I$$ and $$S_2 = U_2 L_2^{-1} U^T_2 + \gamma I$$. Then,
+Now we can define the *Feature Space Laplacian Graph Kernel (FLG Kernel)*, by replacing the vertex space variables we defined in *Laplacian Graph Kernel* with the feature space variables we defined above. Let $$S_1 = U_1 L_1^{-1} U^T_1 + \gamma I$$ and $$S_2 = U_2 L_2^{-1} U^T_2 + \gamma I$$. Then,
 $$\begin{equation}
 k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^{1/2}}{\lvert S_1^{-1} \rvert^{1/4}\lvert S_2^{-1} \rvert^{1/4}}\end{equation}$$.
 
-
-
+So, why do we like *FLG Kernel* better?
+1. It is permutation invariant since its features are defined by local vertex features.
+2. Now that we work on a feature space independent from the graph size, we can apply the kernel to two graphs with different number of vertices.
+**Note the the FLG Kernel still works in a single scale.** We will address this problem in the next post.
 
 
 **References**  
