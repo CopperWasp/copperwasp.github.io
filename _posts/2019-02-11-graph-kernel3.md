@@ -32,7 +32,7 @@ Spectral graph theory suggest that eigenvectors with low eigenvalues of a graph 
 - This is an interesting outcome since it shows that the covariance matrix of $$\mathbf{x}$$ is $$(L^G + \eta I)^{-1}$$. Since small eigenvalue eigenvectors of a covariance matrix represent the direction of the points with a smaller spread (in terms of variance), this direction applies to a large fraction of points therefore represents a more global information.
 - This is kind of the opposite of the logic that we use for SVD in dimensionality reduction tasks. We select large eigenvalue eigenvectors since they carry a more discriminative information: direction the points differ the most.
 
-The intuitions given above suggest that if we want a kernel that is able to compare two graphs in terms of their overall topology, it is a good idea consider comparing lower eigenvalue eigenvectors of given graphs.
+The intuitions given above suggest that if we want a kernel that is able to compare two graphs in terms of their overall topology, it is a good idea to consider comparing lower eigenvalue eigenvectors of given graphs.
 
 Further expanding the Markov Random Field intuition, assume graphs $$G_1$$ and $$G_2$$ with $$n$$ vertices represented by normal distributions $$p_1 = \mathcal{N}(0,L^{-1}_1)$$ and $$p_2 = \mathcal{N}(0,L^{-1}_2)$$ respectively.
 - Note that as our basis we will use the [Bhattacharyya kernel](http://www.jmlr.org/papers/volume5/jebara04a/jebara04a.pdf) $$k(p_1,p_2) = \int \sqrt{p_1(x)}\sqrt{p_2(x)}dx$$, because it has a closed form for Gaussian distributions. This kernel acts like a symmetric approximation to KL Divergence, measuring the similarity (*affinity*) between probability distributions.
