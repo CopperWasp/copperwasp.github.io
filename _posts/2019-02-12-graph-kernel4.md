@@ -17,12 +17,12 @@ the authors propose a simple trick to gain *permutation invariance*, which actua
 
 Now we can define the *Feature Space Laplacian Graph Kernel (FLG Kernel)*, by replacing the vertex space variables we defined in *Laplacian Graph Kernel* with the feature space variables we defined above. Let $$S_1 = U_1 L_1^{-1} U^T_1 + \gamma I$$ and $$S_2 = U_2 L_2^{-1} U^T_2 + \gamma I$$. Then,
 $$\begin{equation}
-k_{LG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^{1/2}}{\lvert S_1^{-1} \rvert^{1/4}\lvert S_2^{-1} \rvert^{1/4}}\end{equation}$$.
+k_{FLG}(G_1,G_2) = \dfrac{\lvert (\dfrac{1}{2}S_1 + \dfrac{1}{2}S_2)^{-1} \rvert^{1/2}}{\lvert S_1^{-1} \rvert^{1/4}\lvert S_2^{-1} \rvert^{1/4}}\end{equation}$$.
 
 So, why do we like the FLG Kernel better?
 1. It is permutation invariant, since its variables are defined by local vertex features.
 2. Now that we work on a feature space that is independent from the graph size, we can apply the kernel to two graphs with different number of vertices.  
-**Note the the FLG Kernel still works in a single scale.** We will address this problem in the next post.
+**Note the the FLG Kernel still works at a single scale.** We will address this problem in the next post.
 
 
 **References**  
